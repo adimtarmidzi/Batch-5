@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu 1</title>
+</head>
+<body>
+	<form th:action="@{/pasien/create}">
+		<table>
+			<tr>
+				<td>Kode Pasien</td>
+				<td><input type="text" name="kodePasien" id="idkodePasien"></td>
+			</tr>
+			<tr>
+				<td>Nama Pasien</td>
+				<td><input type="text" name="namaPasien" id="idnamaPasien"></td>
+			</tr>
+			<tr>
+
+				<td>Gender Pasien</td>
+				<td><input type="radio" name="gender" id="idgender" value="Pria">
+					Pria <input type="radio" name="gender" id="idgender" value="Wanita">
+					Wanita</td>
+			</tr>
+			<tr>
+				<td>Kategori pasien</td>
+				<td><select name="kategoriPasien" id="idkategoriPaisen">
+						<option value="BPJS">BPJS</option>
+						<option value="Mandiri">Mandiri</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Biaya Pasien</td>
+				<td><input type="number" name="biaya" id="idbiaya"></td>
+			</tr>
+
+
+			<tr>
+				<td>Tanggal lahir</td>
+
+				<td><input type="date" name="tanggalLahir" id="idtanggalLahir"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><button type="submit" value="submit">Submit</button> &nbsp;
+					&nbsp;<input type="reset"></td>
+			</tr>
+					
+		 
+              
+		</table>
+
+
+
+	</form>
+
+	<!-- Hasil lempar :
+	<input type="text" th:value="${namaPasienLempar}">
+ -->
+
+</body>
+</html>

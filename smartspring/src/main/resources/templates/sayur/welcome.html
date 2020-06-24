@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Selamat Datang di Welcome.html folder sayur</h1>
+	<h1>Buah dari backendnya</h1>
+	<a th:text="${buah1Frontend}"></a>
+	
+	<form th:action="@{/sayur/lanjut.do}" method="get">
+		Buah2Frontend <input type="text" name="buah2Frontend"/>
+		<button type="submit">Klik to Next</button>
+	</form>
+	
+	<h2>Buah Impor</h2>
+	<a th:text="${impor1Frontend}"></a>
+</body>
+</html>

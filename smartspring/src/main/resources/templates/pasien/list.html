@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html
+xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List</title>
+</head>
+<body>
+	<table border ="1">
+	<tr>
+		<td>No</td>
+		<td>Nama Pasien</td>
+		<td>Gender</td>
+		<td>Kategori</td>
+		<td>Biaya</td>
+		<td>Tanggal Lahir</td>
+	</tr>
+	<!--  looping -->
+	<!--  each utk mksudnya setiap pasienModel, di looping tergantung jml data yg ada di pasienModelList -->
+	<tr th:each = "pasienModel:${pasienModelList}">
+	<!-- lalu dimasukan ke td nya -->
+		<td th:text="${pasienModel.kodePasien}"></td>
+		<td th:text="${pasienModel.namaPasien}"></td>
+		<td th:text="${pasienModel.gender}"></td>
+		<td th:text="${pasienModel.kategoriPasien}"></td>
+		<td th:text="${pasienModel.biaya}"></td>
+		<td th:text="${pasienModel.tanggalLahir}"></td>
+	</tr>
+	<!-- End Loop -->
+	</table>
+</body>
+</html>
